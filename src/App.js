@@ -10,8 +10,8 @@ function App() {
 
     <div>
       <Cabecera/>
-      
-      
+      <Menu/>
+      hola
       <Pie/>
 
     </div>
