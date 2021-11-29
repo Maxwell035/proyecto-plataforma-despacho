@@ -11,7 +11,9 @@ const Cabecera = () => {
                 </div>
                 <div class="col-2">
                     <img src="./user.jpg" alt="" class="user"/>
-                    
+                    <div class="container Administrador">
+                        Administrador
+                     </div>
                 </div>
             </div>
         </header>

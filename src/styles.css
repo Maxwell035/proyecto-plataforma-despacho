@@ -42,7 +42,7 @@ body{
 .titulo{
     width: 449px;
     height: 97px;
-    margin-left: 119px;
+    margin-left: 250px;
     margin-right: 872px;
     font-size: 40px;
     display: flex;
@@ -55,8 +55,10 @@ body{
 
 .botones{
     font-size: 20px;
-    background-color: #B9E3E5;
+    background-color: #D1F2EB;
+    border-color: #D1F2EB;
     text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
 }
 .botones2{
@@ -65,16 +67,31 @@ body{
 }
 
 .botones3{
-    margin-left: 1000px;
+    margin-left: 1093px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     }
 .nombres{
     background-color: white;
     width: 700px;
     height:50px;
-    margin-left: 413px;
+    margin-left: 500px;
+    margin-top: 10px;
     text-align: center;
     align-items: center;
     justify-content: center;
+    font-size: 25px;  
+}
+.Administrador{
+    color: White;
+    text-align: right;
+    font-size: 20px;
+}
+.botoncrear{
+    margin-left: 1400px;
+    background-color: #0F3057;
+    border-color: #0F3057;
+    border-radius:10px;
     font-size: 25px;
-   
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
