@@ -2,6 +2,7 @@
 import Cabecera from './componentes/Cabecera';
 import Menu from './componentes/Menu';
 import Pie from './componentes/Pie';
+import Usuarios from './componentes/Usuarios';
 import './styles.css';
 
 
@@ -11,7 +12,7 @@ function App() {
     <div>
       <Cabecera/>
       <Menu/>
-      hola
+      <Usuarios/>
       <Pie/>
 
     </div>

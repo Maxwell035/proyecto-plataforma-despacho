@@ -6,7 +6,6 @@ const Menu = () => {
                 <a href="#" className="col">Home</a>
                 <a href="#" className="col">Quienes Somos</a>
                 <a href="#" className="col">Contáctanos</a>
-                <a href="#"><button type="button" className="btn btn-secondary" style= {{'font-size' : '2vw' }}>Ingresar</button></a>
             </div>
             
         </nav>
