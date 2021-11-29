@@ -1,7 +1,7 @@
 const Usuarios = () => {
     return (
 <div class="container titulo">
-         Lista de Usuarios
+         Listado de Usuarios
       </div>
     )
 }

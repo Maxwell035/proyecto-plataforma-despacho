@@ -52,3 +52,29 @@ body{
     font-weight: normal;
 
 }
+
+.botones{
+    font-size: 20px;
+    background-color: #B9E3E5;
+    text-align: center;
+    
+}
+.botones2{
+
+    color: #DD0000;
+}
+
+.botones3{
+    margin-left: 1000px;
+    }
+.nombres{
+    background-color: white;
+    width: 700px;
+    height:50px;
+    margin-left: 413px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+   
+}
