@@ -1,17 +1,16 @@
 import React from 'react'
-import MenuAdmin from './componentes/MenuAdmin';
-import Cabecera from './componentes/Cabecera';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ListarOrdenesDesp from './pages/ListarOrdenesDesp';
 import './styles.css';
-import Pie from './componentes/Pie';
-
-
 
 function App() {
   return (
 
-    <div>
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/listarODD' element={<ListarOrdenesDesp/>}/>
+      </Routes>
+    </BrowserRouter>
   
   );
 }
