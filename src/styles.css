@@ -7,6 +7,8 @@
 /*# sourceMappingURL=bootstrap.min.css.map */
 body{
     background-color: #e7e7de;
+    font-family:'Roboto';
+    
 }
 .logo{
     width: 10vw;
@@ -14,28 +16,50 @@ body{
 .col-8{
     color: white;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 1.8vw;
     font-weight: bold;
     margin-top: 1%;
 }
 .user{
-    width: 7vw;
-    margin-left: 47%;
+    width: 6vw;
+    margin-left: 50%;
 }
+.tipo{
+    margin-left: 55%;
+    color: white;
+    font-size: 0.7vw;
+}
+
+
 .col{
     text-align: center;
     color: white;
-    font-size: 2vw;
-    font-weight: bold;
+    font-size: 1.5vw;
+  
 }
 #footer{
     background-color: #06174b;
-    margin-top: 10%;
+    margin-top: 8%;
     overflow: hidden;
 }
 #call{
     width: 5vw;
 }
 .redes{
-    width: 3vw;
+    width: 4vw;
+    
+}
+.tabla1{
+    display:block;
+    font-size: 1.3vw;
+    margin: 2% auto;
+    width:60%;
+    text-align:center;
+
+}
+h5{
+    display:block;
+    font-size: 1.7vw;
+    text-align:center;
+    margin-top:5%;
 }
