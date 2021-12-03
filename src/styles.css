@@ -57,9 +57,29 @@ body{
     text-align:center;
 
 }
+
+h4{
+    display:block;
+    font-size: 1.3vw;
+    text-align:center;
+    margin-top:2%;
+    
+}
+
 h5{
     display:block;
     font-size: 1.7vw;
     text-align:center;
     margin-top:5%;
+}
+
+.card{
+    background-color:LightGray ;
+    display:block;
+    font-size: 1.3vw;
+    margin: 4% auto;
+    width:90%;
+}
+.thodd{
+    background-color:#e7e7de;
 }
