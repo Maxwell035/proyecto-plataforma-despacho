@@ -14,7 +14,7 @@ const ListarOrdenesDesp = () => {
         <>
             <Cabecera/>
             <MenuAdmin/>
-            <ModalODD/>
+            <ModalODD />
             <div>
                 <h5>Ordenes despachadas en el Dia</h5>
             </div>
