@@ -5,7 +5,7 @@ import ListarOrdenesDesp from './pages/ListarOrdenesDesp';
 import OrdenDesp from './pages/OrdenDesp';
 import Registro from './pages/Registro';
 import Login from './pages/Login';
-import Quienessomos from './pageses/Quienessomos';
+import Quienessomos from './pages/Quienessomos';
 import Home from './pages/Home';
 import './styles.css';
 

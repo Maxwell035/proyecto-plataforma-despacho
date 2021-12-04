@@ -1,7 +1,7 @@
 import React from 'react'
-import Cabecera from './componentes/Cabecera';
-import Menu from './componentes/Menu';
-import Pie from './componentes/Pie';
+import Cabecera from '../componentes/Cabecera';
+import Menu from '../componentes/Menu';
+import Pie from '../componentes/Pie';
 
 function Home() {
     return (
