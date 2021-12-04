@@ -89,6 +89,9 @@ form{
     border-radius: 8px;
     box-shadow: 0 0 20px black;
 }
+.btn{
+    margin-bottom: 5%;
+}
 .title{
     color: black;
     text-align: center;

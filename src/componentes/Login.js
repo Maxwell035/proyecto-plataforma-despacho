@@ -3,7 +3,7 @@ import React from 'react'
 function Login() {
     return (
         <div>
-            <h1 class="titulo">Iniciar Sesión</h1>
+            <h1 className="titulo">Iniciar Sesión</h1>
             <form className="formulario">
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label titulo" >Nombre de usuario</label>
