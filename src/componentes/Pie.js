@@ -8,12 +8,10 @@ const Pie = () => {
                 <p><img src="./images/agente.jpg" alt="" id="call"/>
                 Línea Nacional: 01 8000 37 94</p>
             </div>
-            <div className="col 4" style={{ 'margin-top': '2%' }}>
+            <div className="col 4" >
                 <a href="#"><img src="./images/facebook.jpg" alt="faceboock" className="redes"/></a>
                 <a href="#"><img src="./images/instagram.jpg" alt="instagram" className="redes"/></a>
-                <a href="#"><img src="./images/twitter.jpg" alt="twitter" className="redes"/></a>
-                
-                
+                <a href="#"><img src="./images/twitter.jpg" alt="twitter" className="redes"/></a>   
             </div>
         </div>
     </footer>

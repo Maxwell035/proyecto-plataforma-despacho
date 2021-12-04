@@ -9,7 +9,7 @@ const Cabecera = () => {
                     <a href="inicio"><img src="./images/logo1.jpg" alt="Logo" className="logo"/></a>
                 </div>
                 <div className="col-8">
-                    <p >Cargar Transportes y Logística Ltda</p>
+                    <h2>Cargar Transportes y Logística Ltda.</h2>
                 </div>
                 <div className="col-2">
                     <img src="./images/user.jpg" alt="" className="user"/>
