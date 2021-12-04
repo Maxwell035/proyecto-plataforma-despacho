@@ -1,7 +1,13 @@
 import React from 'react'
+import Cabecera from '../componentes/Cabecera'
+import Menu from '../componentes/Menu'
+import Pie from '../componentes/Pie'
 
 function Registro() {
     return (
+        <>
+        <Cabecera/>
+        <Menu/>
         <div>
             <div className="row title">
                 <h1>Registro</h1>
@@ -58,9 +64,9 @@ function Registro() {
                     <img src="./images/muñeca.jpg" className="muñeca1"/>
                 </div>
         </div>
-            
-        
         </div>
+        <Pie/>
+        </>
     )
 }
 

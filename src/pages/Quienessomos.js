@@ -1,7 +1,13 @@
 import React from 'react'
+import Cabecera from '../componentes/Cabecera'
+import Menu from '../componentes/Menu'
+import Pie from '../componentes/Pie'
 
 function Quienessomos() {
     return (
+        <>
+        <Cabecera/>
+        <Menu/>
         <div>
             <h1 className="title">Quienes Somos</h1>
             <div className="container">
@@ -26,6 +32,8 @@ function Quienessomos() {
                 </div>
             </div>
         </div>
+        <Pie/>
+        </>
     )
 }
 

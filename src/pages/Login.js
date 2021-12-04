@@ -1,7 +1,14 @@
 import React from 'react'
+import Cabecera from '../componentes/Cabecera'
+import Menu from '../componentes/Menu'
+import Pie from '../componentes/Pie'
+
 
 function Login() {
     return (
+        <>
+        <Cabecera/>
+        <Menu/>
         <div>
             <h1 class="titulo">Iniciar Sesión</h1>
             <form className="formulario">
@@ -21,6 +28,8 @@ function Login() {
                 
             </form>
         </div>
+        <Pie/>
+        </>
     )
 }
 

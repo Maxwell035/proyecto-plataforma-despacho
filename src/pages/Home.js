@@ -8,9 +8,10 @@ function Home() {
         <>
         <Cabecera/>
         <Menu/>
-        <div>
-            <img src="./images/banner.jpeg" alt="" class="banner"/>
         <div className="contenedor">
+            <div>
+                <img src="./images/banner.jpeg" alt="" class="banner"/>
+            </div>
             <div className="row">
                 <div className="col"></div>
                     <div className=" col box">
@@ -27,10 +28,10 @@ function Home() {
                         <p className="rutas">Cotiza tu envío</p>
                         <a href="#"><img src="./images/carro.jpg" alt="" className="btn1"/></a>
                     </div>
-                    <div class="col"></div>
-                </div>
+                <div class="col"></div>
             </div>
         </div>
+        
         <Pie/>
         </>
     )

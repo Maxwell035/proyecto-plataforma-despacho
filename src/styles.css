@@ -83,8 +83,9 @@ h5{
 }
 /*ESTILOS PÁGINA INICIO*/
 .banner{
-    width: 100%;
-    height: 300px;
+    margin-top: 2%;
+    width: 1%;
+    
 }
 .btn1{
     width: 70%;
