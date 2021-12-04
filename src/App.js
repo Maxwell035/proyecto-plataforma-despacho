@@ -10,7 +10,7 @@ import Login from './pages/Login';
 import Quienessomos from './pages/Quienessomos';
 import Home from './pages/Home';
 import './styles.css';
-
+import "./componentes/ListarOrdenes.css";
 
 function App() {
   return (
