@@ -1,25 +1,28 @@
-
-import Cabecera from './componentes/Cabecera';
-import Menu from './componentes/Menu';
-import Pie from './componentes/Pie';
-import Usuarios from './componentes/Usuarios';
-import Listado from './componentes/Listado';
-import Botoncrear from './componentes/Botoncrear';
+import React from 'react'
+import VerUsuario from './Pages/VerUsuario';
+import Administrador from './Pages/Administrador';
+import EditarUsuario from './Pages/EditarUsuario';
 import './styles.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 function App() {
   return (
 
     <div>
-      <Cabecera/>
-      <Menu/>
-      <Usuarios/>
-      <Listado/>
-      <Botoncrear/>
-      <Pie/>
+      
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element= {<Administrador/>}/>  
+          <Route path="/VerUsuario" element= {<VerUsuario/>}/>  
+          <Route path="/EditarUsuario" element= {<EditarUsuario/>}/>  
+        </Routes>
+      </BrowserRouter>
 
-    </div>
+    </div> 
+
   
   );
 }
