@@ -9,6 +9,10 @@ import { OrdenDespacho } from '../datos';
 
 const ListarOrdenesDesp = () => {
     const orden = OrdenDespacho
+
+    const consultarOrden = (p) => (event) => {
+        return  <ModalODD />
+    }
       
     return (
         <>
@@ -35,7 +39,7 @@ const ListarOrdenesDesp = () => {
                                                 <td>{p.cliente}</td>
                                                 <td>{p.precio}</td>
                                                 <td style={{ 'background-color':'#e7e7de' }}><Button type="button" className={p} data-bs-toggle="modal"
-                                                data-bs-target="#modalODD" /></td>
+                                                data-bs-target="#modalODD" onClick={consultarOrden(p)}/></td>
                                             </tr>)}
                         
                     </tbody>
