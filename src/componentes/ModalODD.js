@@ -1,21 +1,19 @@
 import React from 'react'
-import { OrdenDespacho } from '../datos'
 
-
-const ModalODD = () => {
+function ModalODD (codigo,cliente,precio, descripcion, camiones,origen,destino, nombreProd,peso) {
     
-    const ordenes=OrdenDespacho
+   
+    console.log('ímprimir');
     
-    return (
         <div>
-             {ordenes.map((p) => 
+    
             <div class="modal fade" id="modalODD" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg" >
                     <div class="modal-content" style={{'background-color': 'LightGray'}}>
                         <div class="modal-body">
                         
                             <div className="card-body">
-                                <h4 className="card-title">Orden de Despacho No.{p.codigo}</h4><br/>
+                                <h4 className="card-title">Orden de Despacho No.{codigo}</h4><br/>
 
                                 <div className="container">
                                     <div className="row">  
@@ -26,17 +24,17 @@ const ModalODD = () => {
                                                 <tbody>
                                                     <tr className='thead'>
                                                         <th scope="row">Nombre:</th>
-                                                        <td>{p.nombreProd}</td>
+                                                        <td>{nombreProd}</td>
                                                     </tr> 
                                                     <br/>
                                                     <tr className='thead'>
                                                         <th scope="row">Descripcion:</th> 
-                                                        <td>{p.descripcion}</td>
+                                                        <td>{descripcion}</td>
                                                     </tr> 
                                                     <br/>
                                                     <tr className='thead'>
                                                         <th scope="row">Peso:</th>
-                                                        <td>{p.peso}</td>
+                                                        <td>{peso}</td>
                                                     </tr> 
                                                 </tbody>
                                             </table>
@@ -47,19 +45,19 @@ const ModalODD = () => {
                                                 <tbody>
                                                     <tr className='thead'>
                                                         <th scope="row">Cliente:</th>
-                                                        <td>{p.cliente}</td>
+                                                        <td>{cliente}</td>
                                                     </tr> <br/>
                                                     <tr className='thead'>
                                                         <th scope="row">Ruta:</th>
-                                                        <td>{p.origen}-{p.destino}</td>
+                                                        <td>{origen}-{destino}</td>
                                                     </tr> <br/>
                                                     <tr className='thead'>
                                                         <th scope="row">Cantidad de Camiones:</th>
-                                                        <td>{p.camiones}</td>
+                                                        <td>{camiones}</td>
                                                     </tr> <br/> <br/>
                                                     <tr className='thead'>
                                                         <th scope="row">Total a Pagar:</th>
-                                                        <td>$ {p.precio}</td>
+                                                        <td>$ {precio}</td>
                                                     </tr>
                                                 </tbody>
 
@@ -76,9 +74,10 @@ const ModalODD = () => {
                     </div>
                 </div>
             </div>
-            )} 
+    
         </div>
-    )
+    
 }
 
-export default ModalODD
+
+export {ModalODD} 
