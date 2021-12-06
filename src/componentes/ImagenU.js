@@ -14,7 +14,7 @@ const ImagenU = () => {
             <div className="container form">
         <form>
             <div className="mb-3">
-            <label for="exampleInputEmail1" className="form-label labels">Nombre</label>
+                <label for="exampleInputEmail1" className="form-label labels">Nombre</label>
                 <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
             </div>
             <div className="mb-3">
