@@ -52,6 +52,11 @@ body{
     font-weight: normal;
 
 }
+.titulo2{
+    margin-top:30px;
+    color: #06174b;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 .botones{
     font-size: 20px;
@@ -145,6 +150,7 @@ body{
 .form{
     text-align: left;
     width: 600px;
+    margin-top: 10px;
     
 }
 .labels{
@@ -163,7 +169,10 @@ body{
     color: #DD0000;
 }
 .link:hover{
-    color:#DD0000;
+    color:white;
+}
+.link2{
+    color:white;
 }
 
 
