@@ -1,19 +1,21 @@
 import React from 'react'
+import { OrdenDespacho } from '../datos'
 
-function ModalODD (codigo,cliente,precio, descripcion, camiones,origen,destino, nombreProd,peso) {
+
+const ModalODD = () => {
     
-   
-    console.log('ímprimir');
+    const ordenes=OrdenDespacho
     
+    return (
         <div>
-    
+             {ordenes.map((p) => 
             <div class="modal fade" id="modalODD" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg" >
                     <div class="modal-content" style={{'background-color': 'LightGray'}}>
                         <div class="modal-body">
                         
                             <div className="card-body">
-                                <h4 className="card-title">Orden de Despacho No.{codigo}</h4><br/>
+                                <h4 className="card-title">Orden de Despacho No.{p.codigo}</h4><br/>
 
                                 <div className="container">
                                     <div className="row">  
@@ -24,17 +26,17 @@ function ModalODD (codigo,cliente,precio, descripcion, camiones,origen,destino, 
                                                 <tbody>
                                                     <tr className='thead'>
                                                         <th scope="row">Nombre:</th>
-                                                        <td>{nombreProd}</td>
+                                                        <td>{p.nombreProd}</td>
                                                     </tr> 
                                                     <br/>
                                                     <tr className='thead'>
                                                         <th scope="row">Descripcion:</th> 
-                                                        <td>{descripcion}</td>
+                                                        <td>{p.descripcion}</td>
                                                     </tr> 
                                                     <br/>
                                                     <tr className='thead'>
                                                         <th scope="row">Peso:</th>
-                                                        <td>{peso}</td>
+                                                        <td>{p.peso}</td>
                                                     </tr> 
                                                 </tbody>
                                             </table>
@@ -45,19 +47,19 @@ function ModalODD (codigo,cliente,precio, descripcion, camiones,origen,destino, 
                                                 <tbody>
                                                     <tr className='thead'>
                                                         <th scope="row">Cliente:</th>
-                                                        <td>{cliente}</td>
+                                                        <td>{p.cliente}</td>
                                                     </tr> <br/>
                                                     <tr className='thead'>
                                                         <th scope="row">Ruta:</th>
-                                                        <td>{origen}-{destino}</td>
+                                                        <td>{p.origen}-{p.destino}</td>
                                                     </tr> <br/>
                                                     <tr className='thead'>
                                                         <th scope="row">Cantidad de Camiones:</th>
-                                                        <td>{camiones}</td>
+                                                        <td>{p.camiones}</td>
                                                     </tr> <br/> <br/>
                                                     <tr className='thead'>
                                                         <th scope="row">Total a Pagar:</th>
-                                                        <td>$ {precio}</td>
+                                                        <td>$ {p.precio}</td>
                                                     </tr>
                                                 </tbody>
 
@@ -74,10 +76,9 @@ function ModalODD (codigo,cliente,precio, descripcion, camiones,origen,destino, 
                     </div>
                 </div>
             </div>
-    
+            )} 
         </div>
-    
+    )
 }
 
-
-export {ModalODD} 
+export default ModalODD

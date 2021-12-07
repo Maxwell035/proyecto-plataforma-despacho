@@ -10,13 +10,13 @@ function Home() {
         <Menu/>
         <div className="contenedor">
             <div>
-                <img src="./images/banner.jpeg" alt="" class="banner"/>
+                <img src="./images/banner.jpeg" alt="" className="banner"/>
             </div>
             <div className="row">
                 <div className="col"></div>
                     <div className=" col box">
                         <p className="rutas">Nuestras Rutas</p>
-                        <a href="#"><img src="./images/mapa.jpg" alt="" class="btn1"/></a>
+                        <a href="#"><img src="./images/mapa.jpg" alt="" className="btn1"/></a>
                     </div>
                     <div className="col">
                         <p className="legend">¡Tus envíos a donde quieras!</p>
@@ -28,7 +28,7 @@ function Home() {
                         <p className="rutas">Cotiza tu envío</p>
                         <a href="#"><img src="./images/carro.jpg" alt="" className="btn1"/></a>
                     </div>
-                <div class="col"></div>
+                <div className="col"></div>
             </div>
         </div>
         
