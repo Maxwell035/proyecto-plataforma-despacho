@@ -11,7 +11,7 @@ const ImagenU = () => {
         </div>
         </div>
         <div className="col ">
-            <div className="container form">
+            <div className="container form1">
         <form>
             <div className="mb-2">
                 <label for="inputNombre" className="form-label labels">Nombre</label>

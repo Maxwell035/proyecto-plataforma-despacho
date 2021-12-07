@@ -3,7 +3,7 @@ const Formulario1 = () => {
     return(
         <>
         <div className="col mx-auto">
-            <div className="container form">
+            <div className="container form1">
         <form>
             <div className="mb-2">
                 <label for="exampleInputEmail1" className="form-label labels">Nombre</label>

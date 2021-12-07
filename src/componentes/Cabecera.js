@@ -1,21 +1,27 @@
+import React from 'react'
+
 const Cabecera = () => {
     return (
         
         <header className="container-fluid" >
-            <div className="row fluid" style={{ 'background-color': '#06174b'}}>
+
+                           
+
+            <div className="row fluid" style={{ 'backgroundColor': '#06174b'}}>
                 <div className="col-2">
-                    <a href="inicio"><img src="./logo1.jpg" alt="Logo" className="logo"/></a>
+                    <a href="/"><img src="./images/logo1.jpg" alt="Logo" className="logo"/></a>
                 </div>
                 <div className="col-8">
-                    <p >Cargar Transportes y Logística Ltda</p>
+                    <h2>Cargar Transportes y Logística Ltda.</h2>
                 </div>
                 <div className="col-2">
-                    <img src="./user.jpg" alt="" className="user"/>
-                    <div className="container Administrador">
-                        Administrador
-                     </div>
+                    <img src="./images/user.jpg" alt="" className="user"/>
+                    <p className='tipo'>Usuario Interno</p>
+
                 </div>
             </div>
+            
+            
         </header>
     
       
