@@ -149,8 +149,9 @@ body{
 }
 .form{
     text-align: left;
-    width: 600px;
+    width: 550px;
     margin-top: 10px;
+    margin-left: 20px;
     
 }
 .labels{
@@ -160,10 +161,10 @@ body{
     align-items: left;
 }
 .imagenform{
-    align-items: center;
-    width:189px;
-    height:197px;
-    margin-top: 200px;
+    margin-left: 20px;
+    width:279px;
+    height:287px;
+    margin-top: 150px;
 }
 .link{
     color: #DD0000;
