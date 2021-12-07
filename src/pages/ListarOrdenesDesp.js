@@ -92,7 +92,7 @@ const ListarOrdenesDesp = () => {
                                         <div className="row">  
                                             <h6 className="card-subtitle mb-2">Informacion de Producto(s) a enviar</h6> <br/>    
                                             
-                                            <div className="col-5" style={{'background': 'white', 'margin-left':'1%'}}>
+                                            <div className="col-5" style={{'background': 'white', 'margin-left':'2%'}}>
                                                 <table className="table table-sm">
                                                     <tbody>
                                                         <tr className='thead'>
@@ -103,8 +103,9 @@ const ListarOrdenesDesp = () => {
                                                         <tr className='thead'>
                                                             <th scope="row">Descripcion:</th> 
                                                             <td>{user.descripcion}</td>
+                                                            
                                                         </tr> 
-                                                        <br/>
+                                                        <br/><br/>
                                                         <tr className='thead'>
                                                             <th scope="row">Peso:</th>
                                                             <td>{user.peso}</td>
