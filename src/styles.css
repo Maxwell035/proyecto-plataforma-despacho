@@ -323,6 +323,18 @@ h5{
 
 }
 
+.h6{
+    text-align:left;
+}
+.thead td{
+    width: 8vw;
+    font-size: 90%;
+}
+.thead th{
+    width: 1vw;
+    font-size: 90%;
+}
+
 
 
 
