@@ -2,7 +2,6 @@ import React from 'react'
 import MenuUInterno from '../componentes/MenuUInterno';
 import Cabecera from '../componentes/Cabecera';
 import Pie from '../componentes/Pie';
-import ModalODD from '../componentes/ModalODD';
 import Button from '../componentes/Button';
 import { OrdenDespacho } from '../datos';
 
@@ -14,9 +13,8 @@ const ListarOrdenesDesp = () => {
         <>
             <Cabecera/>
             <MenuUInterno/>
-            <ModalODD />
-            <div>
-                <h5>Ordenes despachadas en el Dia</h5>
+            <div className="text-center">
+                <h2>Ordenes Despachadas en el Día</h2>
             </div>
             <div className='tabla1'>
             

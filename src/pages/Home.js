@@ -11,7 +11,7 @@ function Home() {
         <Menu/>
         <div className="contenedor">
             <div>
-                <img src="./images/banner.jpeg" alt="" className="banner"/>
+                <img src="./images/banner.jpeg" alt="" className=" banner"/>
             </div>
             <div className="row">
                 <div className="col"></div>

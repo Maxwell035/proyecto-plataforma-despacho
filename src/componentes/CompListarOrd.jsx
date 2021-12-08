@@ -7,7 +7,7 @@ const ListarOrdenes = () => {
         <div>
             <div className="row fluid" >
                 <div className="container-fluid d-flex justify-content-center align-items-center">
-                    <h1 className="col-11 text-center">Mi historial de ordenes de despacho</h1>
+                    <h2 className="col-11 text-center">Historial de Ordenes de Despacho</h2>
                     <select class="form-select m-2" aria-label="Default select example">
                         <option selected>Todos</option>
                         <option value="1">Pendiente</option>
