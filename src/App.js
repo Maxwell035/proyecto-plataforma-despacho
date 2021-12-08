@@ -8,8 +8,15 @@ import Registro from './pages/Registro';
 import Login from './pages/Login';
 import Quienessomos from './pages/Quienessomos';
 import Home from './pages/Home';
+import VerUsuario from './pages/VerUsuario';
+import Administrador from './pages/Administrador';
+import EditarUsuario from './pages/EditarUsuario';
+import CrearUsuario from './pages/CrearUsuario';
+import NuestrasRutas from './pages/NuestrasRutas';
 import './styles.css';
 import "./componentes/ListarOrdenes.css";
+import Dashboard from './pages/Dashboard';
+import './componentes/dashboard.css';
 
 function App() {
   return (
@@ -23,6 +30,12 @@ function App() {
         <Route path='/listarODD' element={<ListarOrdenesDesp/>}/>
         <Route path="/ListarOrdenes" element={<ListarOrdenesPage />} />
         <Route path="/EditarRutas" element={<EditarRutasPage />} />
+        <Route path="/Administrador" element= {<Administrador/>}/>  
+        <Route path="/VerUsuario" element= {<VerUsuario/>}/>  
+        <Route path="/EditarUsuario" element= {<EditarUsuario/>}/>
+        <Route path="/CrearUsuario" element= {<CrearUsuario/>}/>
+        <Route path="/NuestrasRutas" element= {<NuestrasRutas/>}/>
+        <Route path="/dashboard" element= { <Dashboard />}/>  
       </Routes>
 
     </BrowserRouter>
