@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 
+=======
+>>>>>>> proyalice
 const InfoUsuario = () => {
     return (
     <div className="container contenedorgrande">

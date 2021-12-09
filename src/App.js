@@ -1,9 +1,9 @@
 import React from 'react'
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import ListarOrdenesDesp from './pages/ListarOrdenesDesp';
-import ListarOrdenesPage from "./pages/ListarOrdenes"
-import EditarRutasPage from "./pages/EditarRutas"
+import ListarOrdenesPage from './pages/ListarOrdenes';
+import EditarRutasPage from './pages/EditarRutas';
 import Registro from './pages/Registro';
 import Login from './pages/Login';
 import Quienessomos from './pages/Quienessomos';
@@ -20,15 +20,16 @@ import './componentes/dashboard.css';
 
 function App() {
   return (
-
+ 
     <BrowserRouter>
       <Routes>
+      <Route path="/" element= {<Home/>}/>
         <Route path="/Quienessomos" element= {<Quienessomos/>}/>  
         <Route path="/Registro" element= {<Registro/>}/>
         <Route path="/Login" element= {<Login/>}/>
-        <Route path="/" element= {<Home/>}/>
         <Route path='/listarODD' element={<ListarOrdenesDesp/>}/>
         <Route path="/ListarOrdenes" element={<ListarOrdenesPage />} />
+        <Route path="/ListarOrdenesDesp" element={<ListarOrdenesDesp />} />
         <Route path="/EditarRutas" element={<EditarRutasPage />} />
         <Route path="/Administrador" element= {<Administrador/>}/>  
         <Route path="/VerUsuario" element= {<VerUsuario/>}/>  
@@ -37,10 +38,11 @@ function App() {
         <Route path="/NuestrasRutas" element= {<NuestrasRutas/>}/>
         <Route path="/dashboard" element= { <Dashboard />}/>  
       </Routes>
-
+ 
     </BrowserRouter>
-  
+ 
+ 
   );
 }
-
+ 
 export default App;

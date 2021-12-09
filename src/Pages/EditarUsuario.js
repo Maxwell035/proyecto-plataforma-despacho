@@ -1,22 +1,20 @@
+import { Link } from "react-router-dom";
 import React from 'react'
 import Cabecera from '../componentes/Cabecera';
 import Menu from '../componentes/Menu';
 import Pie from '../componentes/Pie';
-import Botoncrear from '../componentes/Botoncrear';
-import Usuarios from '../componentes/Usuarios';
-import Listado from '../componentes/Listado';
+import ImagenU from '../componentes/ImagenU';
 import '../styles.css';
 
 
-function Administrador() {
+function EditarUsuario() {
   return (
 
     <div>
+      
       <Cabecera/>
       <Menu/>
-      <Usuarios/>
-      <Listado/>
-      <Botoncrear/>
+      <ImagenU/>
       <Pie/>
 
     </div> 
@@ -25,4 +23,4 @@ function Administrador() {
   );
 }
 
-export default Administrador;
+export default EditarUsuario;

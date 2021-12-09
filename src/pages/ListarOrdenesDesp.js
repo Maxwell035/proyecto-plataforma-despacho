@@ -1,8 +1,10 @@
+
 import React, { useState } from 'react'
-import MenuAdmin from '../componentes/MenuAdmin';
+import MenuUInterno from '../componentes/MenuUInterno';
 import Cabecera from '../componentes/Cabecera';
 import Pie from '../componentes/Pie';
 import Input from '../componentes/Input';
+
 import Button from '../componentes/Button';
 import { OrdenDespacho } from '../datos';
 
@@ -43,9 +45,11 @@ const ListarOrdenesDesp = () => {
         
         <>
             <Cabecera/>
-            <MenuAdmin/>
-            <div>
-                <h5>Ordenes despachadas en el Dia</h5>
+
+            <MenuUInterno/>
+            <div className="text-center">
+                <h2>Ordenes Despachadas en el Día</h2>
+
             </div>
             <div className='tabla1'>
             

@@ -3,7 +3,11 @@ const Formulario1 = () => {
     return(
         <>
         <div className="col mx-auto">
+<<<<<<< HEAD
             <div className="container form1">
+=======
+            <div className="container form1 mx-auto">
+>>>>>>> proyalice
         <form>
             <div className="mb-2">
                 <label for="exampleInputEmail1" className="form-label labels">Nombre</label>
@@ -26,7 +30,14 @@ const Formulario1 = () => {
                 <input type="email" className="form-control" id="email"/>
             </div>
                 <button type="submit" className="btn btn-primary botoneditar">Guardar</button>
+<<<<<<< HEAD
                 <button type="submit" className="btn btn-primary botoneditar" data-bs-toggle="modal" data-bs-target="#exampleModal">Listar</button>
+=======
+                <button type="submit" className="btn btn-primary botoneditar" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="listar()">Listar</button>
+            
+            
+            
+>>>>>>> proyalice
             </form>
         </div>
         </div>
