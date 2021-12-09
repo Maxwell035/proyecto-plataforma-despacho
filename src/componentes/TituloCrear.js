@@ -1,7 +1,7 @@
 const TituloCrear = () => {
     return(
     <div className="col mx-auto titulo2">
-         Crear Usuario
+         <h1>Crear Usuario</h1>
       </div>
 
     )
