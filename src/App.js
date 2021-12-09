@@ -13,10 +13,12 @@ import Administrador from './pages/Administrador';
 import EditarUsuario from './pages/EditarUsuario';
 import CrearUsuario from './pages/CrearUsuario';
 import NuestrasRutas from './pages/NuestrasRutas';
+import CotizaEnvio from './pages/CotizaEnvio';
+import Dashboard from './pages/Dashboard';
 import './styles.css';
 import "./componentes/ListarOrdenes.css";
-import Dashboard from './pages/Dashboard';
 import './componentes/dashboard.css';
+
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
         <Route path="/CrearUsuario" element= {<CrearUsuario/>}/>
         <Route path="/NuestrasRutas" element= {<NuestrasRutas/>}/>
         <Route path="/dashboard" element= { <Dashboard />}/>  
+        <Route path="/CotizaEnvio" element= {<CotizaEnvio/>}/>
       </Routes>
  
     </BrowserRouter>

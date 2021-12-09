@@ -5,13 +5,8 @@ const ImagenU = () => {
         <>
         <div className="row conteneditar">
         <div className="col">
-<<<<<<< HEAD
-        <div className="container">
-            <img src="Imagen1.png" className="img imagenform" alt=""/>
-=======
         <div className="container ">
             <img src="Imagen1.png" className="img imagenform " alt=""/>
->>>>>>> proyalice
             
         </div>
         </div>
