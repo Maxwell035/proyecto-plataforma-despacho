@@ -2,6 +2,7 @@ import React from 'react'
 import Cabecera from '../componentes/Cabecera';
 import Menu from '../componentes/Menu';
 import Pie from '../componentes/Pie';
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -27,7 +28,7 @@ function Home() {
                     </div>
                     <div className="col box">
                         <p className="rutas">Cotiza tu envío</p>
-                        <a href="#"><img src="./images/carro.jpg" alt="" className="btn1"/></a>
+                        <Link to="./CotizaEnvio"><img src="./images/carro.jpg" alt="" className="btn1"/></Link>
                     </div>
                 <div className="col"></div>
             </div>

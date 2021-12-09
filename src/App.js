@@ -13,6 +13,7 @@ import Administrador from './Pages/Administrador';
 import EditarUsuario from './Pages/EditarUsuario';
 import CrearUsuario from './Pages/CrearUsuario';
 import NuestrasRutas from './Pages/NuestrasRutas';
+import CotizaEnvio from './Pages/CotizaEnvio';
 
 import './styles.css';
 import "./componentes/ListarOrdenes.css";
@@ -35,6 +36,7 @@ function App() {
         <Route path="/EditarUsuario" element= {<EditarUsuario/>}/>
         <Route path="/CrearUsuario" element= {<CrearUsuario/>}/>
         <Route path="/NuestrasRutas" element= {<NuestrasRutas/>}/>
+        <Route path="/CotizaEnvio" element= {<CotizaEnvio/>}/>
       </Routes>
  
     </BrowserRouter>

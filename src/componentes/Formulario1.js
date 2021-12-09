@@ -26,7 +26,10 @@ const Formulario1 = () => {
                 <input type="email" className="form-control" id="email"/>
             </div>
                 <button type="submit" className="btn btn-primary botoneditar">Guardar</button>
-                <button type="submit" className="btn btn-primary botoneditar" data-bs-toggle="modal" data-bs-target="#exampleModal">Listar</button>
+                <button type="submit" className="btn btn-primary botoneditar" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="listar()">Listar</button>
+            
+            
+            
             </form>
         </div>
         </div>
