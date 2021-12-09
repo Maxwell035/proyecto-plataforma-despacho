@@ -82,7 +82,7 @@ const ListarOrdenesDesp = () => {
 
                     <div className="modal fade" id="modalODD" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" hidden  ={!modalState}>        
                     <div className="modal-dialog modal-lg" >
-                        <div className="modal-content" style={{'background-color': 'LightGray'}}>
+                        <div className="modal-content" style={{'background-color': '#c4c4c4'}}>
                             <div class="modal-body">
                             
                                 <div className="card-body">
