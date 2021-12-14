@@ -15,14 +15,13 @@ const Cabecera = () => {
                     <h2>Cargar Transportes y Logística Ltda.</h2>
                 </div>
                 <div className="col-2">
-                    <Link to="/ListarOrdenes">
+                    <Link to="/Dashboard">
                     <img src="./images/user.jpg" alt="" className="user">
                     </img>
                     </Link>
 
-                    <Link to="/Administrador">
                     <p className='tipo'>Usuario </p>
-                    </Link>
+                    
 
                 </div>
             </div>
