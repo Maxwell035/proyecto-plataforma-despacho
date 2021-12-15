@@ -6,7 +6,7 @@ const ListIntegrantes = () => {
             <h1>Plataforma Cumplimiento de Órdenes de Despacho por Vehículos</h1>          
         </div>
         <div class="container-fluid text-center">
-        <h2>Grupo 22 Equipo 3</h2>
+        <h2>Grupo 22 Equipo 4</h2>
         </div>
         <p>
         <div class="row align-items-center imagenes">

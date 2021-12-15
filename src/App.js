@@ -9,7 +9,6 @@ import Quienessomos from './pages/Quienessomos';
 import Home from './pages/Home';
 import VerUsuario from './pages/VerUsuario';
 import Administrador from './pages/Administrador';
-import Administrador from './Pages/Administrador';
 import EditarUsuario from './pages/EditarUsuario';
 import CrearUsuario from './pages/CrearUsuario';
 import NuestrasRutas from './pages/NuestrasRutas';
