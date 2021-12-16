@@ -7,9 +7,9 @@ const Menu = () => {
 
         <nav className="navbar navbar-light" style= {{ 'backgroundColor': ' #008990' }}>
             <div className="container-fluid">
-                <Link to="/" className="links-menu col">Home</Link>
-                <Link to="/Quienessomos" className="links-menu col">Quienes Somos</Link>
-                <Link to="#" className="links-menu col">Contáctanos</Link>
+                <Link to="/" className="links-menu col1">Home</Link>
+                <Link to="/Quienessomos" className="links-menu col1">Quienes Somos</Link>
+                <Link to="#" className="links-menu col1">Contáctanos</Link>
                 <Link to="/Login"><button type="button" className="btn btn-secondary" style= {{'fontSize' : '1.2vw' }}>Ingresar</button></Link>
             </div>
             
