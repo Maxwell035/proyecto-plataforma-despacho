@@ -9,7 +9,7 @@ const Listado = () => {
                       </a>
 
                       <ul className="dropdown-menu botones" aria-labelledby="dropdownMenuLink">
-                        <li><a className="dropdown-item" href="#"><Link to="/VerUsuario"> Ver </Link></a></li>
+                        <li><a className="dropdown-item" href="#" ><Link to="/VerUsuario"> Ver </Link></a></li>
                         <li><a className="dropdown-item" href="#"><Link to="/EditarUsuario"> Editar </Link></a></li> 
                         <li><a className="dropdown-item botones2" href="#"><Link to="/EditarUsuario" className="Link link"> Eliminar </Link></a></li>
                       </ul>
