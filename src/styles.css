@@ -306,7 +306,14 @@ h5{
 .imagenes{
     margin-top: 100px;
 }
-
+.col3{
+    text-align: center;
+    color: white;
+    font-size: 1.5vw;
+    text-decoration:none;
+    margin: 0;
+    padding: 20px 0;
+}
 /*ESTILOS PÁGINA INICIO*/
 .banner{
     margin-top: 2%;
