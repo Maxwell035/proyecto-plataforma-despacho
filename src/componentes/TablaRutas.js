@@ -29,6 +29,7 @@ const TablaRutas = () => {
                             <th scope="col">Ruta</th>
                             <th scope="col">Lugar Origen</th>
                             <th scope="col">Lugar Destino</th>
+                            <th scope="col1">Distancia</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,8 +38,11 @@ const TablaRutas = () => {
                                 <td>{r.numRuta}</td>
                                 <td>{r.LugarOrigen}</td>
                                 <td>{r.LugarDestino}</td>
-                            </tr>   
-                            )
+                                <td>{r.distancia}</td>
+                            </tr> 
+                                 
+                        )
+
                         }
                     </tbody>
                 </table>

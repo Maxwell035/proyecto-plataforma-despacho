@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import ListarOrdenesDesp from './pages/ListarOrdenesDesp';
 import ListarOrdenesPage from './pages/ListarOrdenes';
 import EditarRutasPage from './pages/EditarRutas';
@@ -15,10 +14,11 @@ import CrearUsuario from './pages/CrearUsuario';
 import NuestrasRutas from './pages/NuestrasRutas';
 import CotizaEnvio from './pages/CotizaEnvio';
 import Dashboard from './pages/Dashboard';
-
+import Integrantes from './pages/Integrantes';
+ 
 import './styles.css';
-import "./componentes/ListarOrdenes.css";
-import './componentes/dashboard.css';
+import "./componentes/dashboard.css";
+ 
 
 
 function App() {
@@ -34,13 +34,15 @@ function App() {
         <Route path="/ListarOrdenes" element={<ListarOrdenesPage />} />
         <Route path="/ListarOrdenesDesp" element={<ListarOrdenesDesp />} />
         <Route path="/EditarRutas" element={<EditarRutasPage />} />
-        <Route path="/Administrador" element= {<Administrador/>}/>  
+        <Route path="/Administrador" element= {<Administrador />}/>  
         <Route path="/VerUsuario" element= {<VerUsuario/>}/>  
         <Route path="/EditarUsuario" element= {<EditarUsuario/>}/>
         <Route path="/CrearUsuario" element= {<CrearUsuario/>}/>
         <Route path="/NuestrasRutas" element= {<NuestrasRutas/>}/>
-        <Route path="/dashboard" element= { <Dashboard />}/>  
         <Route path="/CotizaEnvio" element= {<CotizaEnvio/>}/>
+        <Route path="/Dashboard" element= { <Dashboard />}/> 
+        <Route path="/Integrantes" element= { <Integrantes />}/> 
+
       </Routes>
  
     </BrowserRouter>

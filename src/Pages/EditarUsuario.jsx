@@ -1,18 +1,20 @@
+
 import React from 'react'
 import Cabecera from '../componentes/Cabecera';
 import Menu from '../componentes/Menu';
 import Pie from '../componentes/Pie';
-import Infousuario from '../componentes/Infousuario';
-import '../styles.css'
+import ImagenU from '../componentes/ImagenU';
+import '../styles.css';
 
 
-function VerUsuario() {
+function EditarUsuario() {
   return (
 
     <div>
+      
       <Cabecera/>
       <Menu/>
-      <Infousuario/>
+      <ImagenU/>
       <Pie/>
 
     </div> 
@@ -21,4 +23,4 @@ function VerUsuario() {
   );
 }
 
-export default VerUsuario;
+export default EditarUsuario;

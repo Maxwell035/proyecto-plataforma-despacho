@@ -4,7 +4,6 @@ import MenuUInterno from '../componentes/MenuUInterno';
 import Cabecera from '../componentes/Cabecera';
 import Pie from '../componentes/Pie';
 import Input from '../componentes/Input';
-
 import Button from '../componentes/Button';
 import { OrdenDespacho } from '../datos';
 
