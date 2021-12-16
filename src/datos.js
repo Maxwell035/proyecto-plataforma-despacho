@@ -1,6 +1,6 @@
 const OrdenDespacho=[{
     "codigo": 100,
-    "cliente": "muebles jamar",
+    "cliente": "Muebles Jamar",
     "nombreProd": "juego de comedor",
     "descripcion": "8 mesas de 4 puestos con sillas",
     "peso": "100kg",
@@ -11,7 +11,7 @@ const OrdenDespacho=[{
     "estado":"despachado",
   }, {
     "codigo": 101,
-    "cliente": "olimpica",
+    "cliente": "OlÍmpica",
     "nombreProd": "televisor 40 pulg",
     "descripcion": "20 televisores smart tv 40 pulg marca olimpo",
     "peso": "40kg",
@@ -22,7 +22,7 @@ const OrdenDespacho=[{
     "estado":"despachado"
   }, {
     "codigo": 102,
-    "cliente": "exito",
+    "cliente": "Éxito",
     "nombreProd": "lavadoras",
     "descripcion": "4 lavadoras carga superior 8 kg marca Haceb",
     "peso": "110kg",
@@ -33,7 +33,7 @@ const OrdenDespacho=[{
     "estado":"despachado"
   }, {
     "codigo": 103,
-    "cliente": "Ferreteria samir",
+    "cliente": "Ferretería Samir",
     "nombreProd": "Pintura pintuco",
     "descripcion": "8 tanque de pintura blanca pintuco 5 galones ",
     "peso": "80kg",
@@ -44,7 +44,7 @@ const OrdenDespacho=[{
     "estado":"pendiente"
   }, {
     "codigo": 104,
-    "cliente": "homecenter",
+    "cliente": "Homecenter",
     "nombreProd": "escalera tipo tijera",
     "descripcion": "30 escalera tipo tijera de 150 cm",
     "peso": "90kg",

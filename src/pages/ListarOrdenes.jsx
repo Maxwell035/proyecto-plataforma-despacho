@@ -1,6 +1,6 @@
 import ListarOrdenes from "../componentes/CompListarOrd";
 import Cabecera from '../componentes/Cabecera';
-import Menu from '../componentes/MenuAdmin';
+import MenuUInterno from '../componentes/MenuUInterno';
 import Pie from '../componentes/Pie';
 import "../componentes/ListarOrdenes.css";
 
@@ -8,7 +8,7 @@ const ListarOrdenesPage = () => {
     return(
         <div>
             <Cabecera/>
-            <Menu/>
+            <MenuUInterno/>
             <ListarOrdenes />
             <Pie/>
         </div>

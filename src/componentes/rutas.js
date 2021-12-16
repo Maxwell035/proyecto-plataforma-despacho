@@ -5,7 +5,7 @@ const rutas =[
         numTarget:"#Ruta1",
         LugarOrigen:"Barranquilla",
         LugarDestino:"Cartagena",
-        distancia:125
+        distancia:"125 Km"
     },
     {
         numRuta:2,
@@ -13,7 +13,7 @@ const rutas =[
         numTarget:"#Ruta2",
         LugarOrigen:"Barranquilla",
         LugarDestino:"Santa Marta",
-        distancia:104
+        distancia:"104 Km"
     },
     {
         numRuta:3,
@@ -21,7 +21,7 @@ const rutas =[
         numTarget:"#Ruta3",
         LugarOrigen:"Barranquilla",
         LugarDestino:"Medellin",
-        distancia:705
+        distancia:"705 Km"
     },
     {
         numRuta:4,
@@ -29,7 +29,7 @@ const rutas =[
         numTarget:"#Ruta4",
         LugarOrigen:"Cartagena",
         LugarDestino:"Santa Marta",
-        distancia:226
+        distancia:"226 Km"
     },
     {
         numRuta:5,
@@ -37,7 +37,7 @@ const rutas =[
         numTarget:"#Ruta5",
         LugarOrigen:"Bogotá",
         LugarDestino:"Medellin",
-        distancia:415
+        distancia:"415 Km"
     }
 ]
 
