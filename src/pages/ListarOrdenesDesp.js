@@ -72,7 +72,9 @@ const ListarOrdenesDesp = () => {
                     <thead className='thodd'>
                         <tr> 
                             <th scope="col">No. Orden</th>
+                            <th scope="col"></th>
                             <th scope="col" >Cliente</th>
+                            <th scope="col"></th>
                             <th scope="col">Precio</th>
                             <th scope="col" ></th>
                         </tr>
@@ -81,7 +83,9 @@ const ListarOrdenesDesp = () => {
                         
                         {listado.map((p) => <tr key={p}>
                                                 <td>{p.codigo}</td>
+                                                <td>|</td>
                                                 <td>{p.cliente}</td>
+                                                <td>|</td>
                                                 <td>{p.precio}</td>
                                             </tr>)}
                     </tbody>

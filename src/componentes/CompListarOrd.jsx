@@ -1,13 +1,28 @@
-import { useState } from "react"
-import rutas from "./rutas"
+import React, { useEffect, useState } from "react";
 import "./ListarOrdenes.css"
 
 const ListarOrdenes = () => {
+
+    const [listado, setListado] = useState([]);
+
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        fetch("http://localhost:8000/orden/listar", {
+            headers: { "authorization": `Bearer ${token}` },
+            method: "POST"
+        })
+            .then(res => res.json())
+            .then(res => {
+                if (res.estado === "ok")
+                    setListado(res.data);
+            })
+    }, [])
+
     return(
         <div>
             <div className="row fluid" >
                 <div className="container-fluid d-flex justify-content-center align-items-center">
-                    <h2 className="col-11 text-center">Historial de Ordenes de Despacho</h2>
+                    <h2 className="col-11 text-center" >Historial de Ordenes de Despacho</h2>
                     <select class="form-select m-2" aria-label="Default select example">
                         <option selected>Todos</option>
                         <option value="1">Pendiente</option>
@@ -19,8 +34,8 @@ const ListarOrdenes = () => {
             </div>
 
             <div class="container">
-                <table class="table text-center">
-                    <thead>
+                <table class="table text-center" style={{ 'background-color':'white'}}>
+                    <thead  className='thodd'>
                         <tr>
                             <th scope="col">No. Orden</th>
                             <th scope="col"></th>
@@ -30,15 +45,14 @@ const ListarOrdenes = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {rutas.map((r)=>
-                            <tr style={{ 'background-color': '#fff'}}>
-                                <td>1</td>
-                                <td>|</td>
-                                <td>20/11/2021</td>
-                                <td>|</td>
-                                <td>Pendiente</td>
-                            </tr>
-                        )}                        
+                    {listado.map((p) => <tr key={p}>
+                                                <td>{p.codigo}</td>
+                                                <td>|</td>
+                                                <td>{p.fecha}</td>
+                                                <td>|</td>
+                                                <td>{p.estado}</td>
+                                            </tr>)}
+                            
                     </tbody>
                 </table>
             </div>
