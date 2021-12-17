@@ -1,26 +1,37 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from "react";
 import MenuUInterno from '../componentes/MenuUInterno';
 import Cabecera from '../componentes/Cabecera';
 import Pie from '../componentes/Pie';
 import Input from '../componentes/Input';
 import Button from '../componentes/Button';
-import { OrdenDespacho } from '../datos';
+
 
 
 const ListarOrdenesDesp = () => {
 
-
-    const orden = OrdenDespacho
-
-    
-    const [code,setCode] =useState("");    
+    const [code,setCode] =useState();    
     const [user,setUser] =useState({});
-    const [modalState, setModalState] = useState(false);    
-    
+    const [modalState, setModalState] = useState(false);  
+    const [listado, setListado] = useState([]);
+
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        fetch("http://localhost:8000/orden/listar", {
+            headers: { "authorization": `Bearer ${token}` },
+            method: "POST"
+        })
+            .then(res => res.json())
+            .then(res => {
+                if (res.estado === "ok")
+                    setListado(res.data);
+            })
+    }, [])
+
+
     const ejecutarModal = (event) => { 
         event.preventDefault();
-        var item = OrdenDespacho.find(item => item.codigo === parseInt(code));
+        var item = listado.find(item => item.codigo === parseInt(code));
             if (item!==undefined) {
                 const userr = {
                     codigo:item.codigo,
@@ -57,6 +68,7 @@ const ListarOrdenesDesp = () => {
             <div className='tabla1'>
             
                 <table className="table" style={{ 'background-color':'white'}}>
+
                     <thead className='thodd'>
                         <tr> 
                             <th scope="col">No. Orden</th>
@@ -66,7 +78,8 @@ const ListarOrdenesDesp = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {orden.map((p) => <tr key={p}>
+                        
+                        {listado.map((p) => <tr key={p}>
                                                 <td>{p.codigo}</td>
                                                 <td>{p.cliente}</td>
                                                 <td>{p.precio}</td>

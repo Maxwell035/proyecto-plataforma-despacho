@@ -30,9 +30,8 @@ function App() {
         <Route path="/Quienessomos" element= {<Quienessomos/>}/>  
         <Route path="/Registro" element= {<Registro/>}/>
         <Route path="/Login" element= {<Login/>}/>
-        <Route path='/listarODD' element={<ListarOrdenesDesp/>}/>
-        <Route path="/ListarOrdenes" element={<ListarOrdenesPage />} />
-        <Route path="/ListarOrdenesDesp" element={<ListarOrdenesDesp />} />
+        <Route exact path="/ListarOrdenes" element={<ListarOrdenesPage />} />
+        <Route exact path="/ListarOrdenesDesp" element={<ListarOrdenesDesp />} />
         <Route path="/EditarRutas" element={<EditarRutasPage />} />
         <Route path="/Administrador" element= {<Administrador />}/>  
         <Route path="/VerUsuario" element= {<VerUsuario/>}/>  
