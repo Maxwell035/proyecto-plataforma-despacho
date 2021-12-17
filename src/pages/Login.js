@@ -13,6 +13,7 @@ function Login() {
     const [error, setError]=useState()
     const [msgError, setMsgError]=useState()
     const [password , setPassword]=useState("")
+    const [rol, setRol]=useState("")
     async function  login(){
        
         await fetch("http://localhost:8000/usuario/login",{
@@ -22,7 +23,8 @@ function Login() {
         }).then(res=> res.json())
         .then(res=>{
             if (res.estado=== "ok"){
-                {window.location.href= "/Home"}
+                
+                {window.location.href= "/Dashboard"}
             }else{
                 setError(true);
                 setMsgError(res.msg);
@@ -50,6 +52,18 @@ function Login() {
                     <label htmlFor="exampleInputPassword1" className="form-label titulo">Contraseña</label>
                     <Input  type="password" className="form-control" id="exampleInputPassword1" placeholder="Ingrese su clave" state={password} setState={setPassword}/>
                 </div>
+
+                <p>Loguéate como:</p>
+
+                        <div>
+                        <input type="radio" id="cliente" name="usuario" value= "cliente" state={rol} onChange={e=>setRol(e.target.value)}/>
+                        <label for="cliente">Cliente</label>
+                        </div>
+
+                        <div>
+                        <input type="radio" id="Empleado" name="usuario" value= "empleado" state={rol} onChange={e=>setRol(e.target.value)} />
+                        <label for="empleado">Empleado</label>
+                        </div>
                 
                 <button type="button" className="btn btn-primary" onClick={login}>Iniciar Sesión</button>
                 <p>¿No tienes una cuenta con nosotros?</p>
@@ -63,3 +77,4 @@ function Login() {
 }
 
 export default Login
+
