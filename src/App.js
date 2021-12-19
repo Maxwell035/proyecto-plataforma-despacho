@@ -1,20 +1,20 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ListarOrdenesDesp from './Pages/ListarOrdenesDesp';
-import ListarOrdenesPage from './Pages/ListarOrdenes';
-import EditarRutasPage from './Pages/EditarRutas';
-import Registro from './Pages/Registro';
-import Login from './Pages/Login';
-import Quienessomos from './Pages/Quienessomos';
-import Home from './Pages/Home';
-import VerUsuario from './Pages/VerUsuario';
-import Administrador from './Pages/Administrador';
-import EditarUsuario from './Pages/EditarUsuario';
-import CrearUsuario from './Pages/CrearUsuario';
-import NuestrasRutas from './Pages/NuestrasRutas';
-import CotizaEnvio from './Pages/CotizaEnvio';
-import Dashboard from './Pages/Dashboard';
-import Integrantes from './Pages/Integrantes';
+import ListarOrdenesDesp from './pages/ListarOrdenesDesp';
+import ListarOrdenesPage from './pages/ListarOrdenes';
+import EditarRutasPage from './pages/EditarRutas';
+import Registro from './pages/Registro';
+import Login from './pages/Login';
+import Quienessomos from './pages/Quienessomos';
+import Home from './pages/Home';
+import VerUsuario from './pages/VerUsuario';
+import Administrador from './pages/Administrador';
+import EditarUsuario from './pages/EditarUsuario';
+import CrearUsuario from './pages/CrearUsuario';
+import NuestrasRutas from './pages/NuestrasRutas';
+import CotizaEnvio from './pages/CotizaEnvio';
+import Dashboard from './pages/Dashboard';
+import Integrantes from './pages/Integrantes';
  
 import './styles.css';
 import "./componentes/dashboard.css";

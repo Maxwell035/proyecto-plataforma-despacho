@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 const Cabecera = () => {
     return (
         
-        <header className="container-fluid" >
-
-                           
+        <header>             
 
             <div className="row fluid" style={{ 'backgroundColor': '#06174b'}}>
                 <div className="col-2">
@@ -20,8 +18,7 @@ const Cabecera = () => {
                     </img>
                     </Link>
 
-                    <p className='tipo'>Usuario </p>
-                    
+                    <p className='tipo'>Usuario </p>      
 
                 </div>
             </div>

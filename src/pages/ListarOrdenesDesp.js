@@ -19,7 +19,7 @@ const ListarOrdenesDesp = () => {
         const token = localStorage.getItem("token");
         fetch("http://localhost:8000/orden/listar", {
             headers: { "authorization": `Bearer ${token}` },
-            method: "POST"
+            method: "GET"
         })
             .then(res => res.json())
             .then(res => {
