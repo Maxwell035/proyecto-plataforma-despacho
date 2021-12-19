@@ -17,15 +17,15 @@ const Cabecera = () => {
                     
                     <img src="./images/user.jpg" alt="" className="user">
                     </img>
-<<<<<<< HEAD
-                    </Link>
+
+                    
 
                     <p className='tipo'>Usuario </p>      
-=======
+
                     
-                    <p className='tipo'>Usuario </p>
                     
->>>>>>> b4e285c17928d6b5b7b2b9741f8b765b6b73594a
+                    
+
 
                 </div>
             </div>

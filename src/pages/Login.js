@@ -22,13 +22,12 @@ function Login() {
             body: JSON.stringify({usuario, password})
         }).then(res=> res.json())
         .then(res=>{
-            if (res.estado=== "ok"){
-                
+            if (rol==="cliente"){
+                {window.location.href= "/"}    
+            }else if (rol==="empleado"){
                 {window.location.href= "/Dashboard"}
-            }else{
-                setError(true);
-                setMsgError(res.msg);
             }
+            
         })
     }
     
