@@ -29,9 +29,9 @@ const ListarOrdenesDesp = () => {
     }, [])
 
 
-    const ejecutarModal = (event) => { 
-        event.preventDefault();
-        var item = listado.find(item => item.codigo === parseInt(code));
+    function ejecutarModal (props){ 
+        
+        var item = listado.find(item => item.codigo === parseInt(props));
             if (item!==undefined) {
                 const userr = {
                     codigo:item.codigo,
@@ -87,20 +87,11 @@ const ListarOrdenesDesp = () => {
                                                 <td>{p.cliente}</td>
                                                 <td>|</td>
                                                 <td>{p.precio}</td>
+                                                <td><button type="button" class="btn btn-secondary mx-4" data-bs-toggle="modal" data-bs-target="#modalODD" onClick={()=>ejecutarModal(p.codigo)} >Ver detalle</button> </td>
                                             </tr>)}
                     </tbody>
                 </table>
-                <Input
-                            type="text"
-                            name="consulta"
-                            id="consulta"
-                            value="Consulta"
-                            required="required"
-                            setState={setCode}
-                            state={code}
-                        />
-                <Button type="button" className="" data-bs-toggle="modal"
-                  data-bs-target="#modalODD" onClick={ejecutarModal}/>
+               
                 <div className='vistaorden'>
                 <div>
 

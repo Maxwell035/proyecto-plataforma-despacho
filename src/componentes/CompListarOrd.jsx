@@ -23,9 +23,9 @@ const ListarOrdenes = () => {
             })
     }, [])
 
-    const ejecutarModal = (event) => { 
-        event.preventDefault();
-        var item = listado.find(item => item.codigo === parseInt(code));
+    function ejecutarModal (props) { 
+       
+        var item = listado.find(item => item.codigo === parseInt(props));
             if (item!==undefined) {
                 const userr = {
                     codigo:item.codigo,
@@ -89,6 +89,7 @@ const ListarOrdenes = () => {
                             <th scope="col">Fecha</th>
                             <th scope="col"></th>
                             <th scope="col">Estado</th>
+                            <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -98,25 +99,11 @@ const ListarOrdenes = () => {
                                                 <td>{new Date (p.fecha).toLocaleDateString('en-US', {year: 'numeric', month: '2-digit', day: '2-digit'})}</td>
                                                 <td>|</td>
                                                 <td>{p.estado}</td>
+                                                <td><button type="button" class="btn btn-primary mx-4" data-bs-toggle="modal" data-bs-target="#modalODD" onClick={()=>ejecutarModal(p.codigo)} >Ver detalle</button> </td>
                                             </tr>)}
                             
                     </tbody>
                 </table>
-
-                <div className="text-center m-4">
-                    <Input
-                                type="text"
-                                name="consulta"
-                                id="consulta"
-                                value="No. Orden"
-                                required="required"
-                                setState={setCode}
-                                state={code}
-                            /> 
-                            <Button type="button" className="btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#modalODD" onClick={ejecutarModal}/>
-                   
-                </div>
                
 
                 <div className='vistaorden'>

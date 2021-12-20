@@ -6,13 +6,16 @@ const EditarRutas = () => {
     const [listado, setListado] = useState([]);
     const [recarga, setRecarga] = useState(false);
     const [user,setUser] =useState({});
+    const [costo,setCosto] =useState([]);
     const [modalState, setModalState] = useState(false);  
     const rutaRef = useRef(); //document.getElementById("nom")
     const origenRef = useRef();
     const costoRef = useRef();
     const destRef = useRef();
     const distanciaRef = useRef();
-
+    const editOrRef = useRef();
+    const editDesRef = useRef();
+    const editDistRef = useRef();
 
     useEffect(() => {
         const token = localStorage.getItem("token");
@@ -72,9 +75,9 @@ const EditarRutas = () => {
     const handleUpdate = () => {
 
         const ruta = document.getElementById("numRuta").value;
-        const origen = document.getElementById("LOrigen").value;
-        const destino = document.getElementById("LDestino").value;
-        const distancia = document.getElementById("Distancia").value;
+        const origen = editOrRef.current.value;
+        const destino = editDesRef.current.value;
+        const distancia = editDistRef.current.value;
         
         fetch("http://localhost:8000/ruta/editar", {
             headers: { "content-type": "application/json" },
@@ -82,31 +85,53 @@ const EditarRutas = () => {
             body: JSON.stringify({ ruta, origen, destino, distancia })
         }).then(res => res.json())
             .then(res => {
-            if (res.estado === "ok")
-                alert("Cambio exitoso");
-                setRecarga(!recarga);
+                if (res.estado === "ok"){
+                    alert("Cambio exitoso");
+                    editOrRef.current.value = "";
+                    editDesRef.current.value = "";
+                    editDistRef.current.value = "";
+                    setRecarga(!recarga);
+                }else{
+                    alert(res.msg)
+                }   
     
             })
     }
 
 
+    function consultarCosto(){
+        const token = localStorage.getItem("token");
+        fetch("http://localhost:8000/costo/listar", {
+            headers: { "authorization": `Bearer ${token}` },
+            method: "GET"
+        })
+            .then(res => res.json())
+            .then(res => {
+                if (res.estado === "ok")
+                    setCosto(res.data); 
+                    console.log(costo);
+            })
+    }
+    
+
     function editarCosto() {
       
-        const costo = costoRef.current.value;
-       console.log(costo);
+        const precio = costoRef.current.value;
+       
         fetch("http://localhost:8000/costo/editar", {
-            method: "PUT",
+            method: "POST",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify({ costo })
+            body: JSON.stringify({ precio })
         }).then(data => data.json())
             .then(data => {
                 alert(data.msg); 
+                costoRef.current.value='';
             })
     }
 
 
     function ejecutarModal(props) { 
-       console.log(props);
+     
         var item = listado.find(item => item.ruta=== parseInt(props));
             if (item!==undefined) {
                 const userr = {
@@ -147,7 +172,7 @@ const EditarRutas = () => {
                     </thead>
                     <tbody>
                         {listado.map((r)=>
-                            <tr className=" align-items-center">
+                            <tr key={r} className=" align-items-center">
                                 <td>{r.ruta}</td>
                                 <td>{r.origen}</td>
                                 <td>{r.destino}</td>
@@ -173,17 +198,17 @@ const EditarRutas = () => {
                                     <label for="numRuta" class="col-form-label"># Ruta</label>
                                     <input type="number" min="0" class="form-control" id="numRuta" value={user.ruta}/>
                                     <label for="LOrigen" class="col-form-label" >Lugar Origen</label>
-                                    <input type="text" class="form-control" id="LOrigen" value={user.origen}/>
+                                    <input type="text" class="form-control" id="LOrigen" ref={editOrRef} />
                                     <label for="LDestino" class="col-form-label" >Lugar Destino</label>
-                                    <input type="text" class="form-control" id="LDestino" value={user.destino}/>
+                                    <input type="text" class="form-control" id="LDestino" ref={editDesRef}/>
                                     <label for="Distancia" class="col-form-label">Distancia en km</label>
-                                    <input type="number" min="0" class="form-control" id="Distancia" value={user.distancia}/>
+                                    <input type="number" min="0" class="form-control" id="Distancia" ref={editDistRef}/>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary" onClick={handleUpdate}>Guardar</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick={handleUpdate}>Guardar</button>
                         </div>
                     </div>
                 </div>
@@ -224,26 +249,26 @@ const EditarRutas = () => {
                     </div>
                 </div>
 
-                <button type="button" className="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#costokm">Modificar costo por Km</button>
+                <button type="button" className="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#costokm"  onClick={consultarCosto}>Modificar costo por Km</button>
                 <div className="modal fade" id="costokm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">Modificar costo por km</h5>
+                                <h4 className="modal-title" id="exampleModalLabel">Modificar costo por km</h4>
                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div className="modal-body">
                                 <form>
                                     <div className="mb-3">
-                                        <label htmlFor="recipient-name" className="col-form-label">El costo actual por km es: $5.000</label>
+                                        <label htmlFor="recipient-name" className="col-form-label">El costo actual por km es: <input type="text" className=" col-xs-3 border-0" readonly/></label>
                                         <h1 className="col-form-label">Ingrese el nuevo costo</h1>
                                         <input type="text" className="form-control" ref={costoRef} />
                                     </div>
                                 </form>
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" className="btn btn-primary" onClick={editarCosto} >Guardar</button>
+                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" className="btn btn-primary" onClick={editarCosto}>Guardar</button>
                             </div>
                         </div>
                     </div>

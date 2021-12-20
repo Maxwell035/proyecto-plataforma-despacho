@@ -32,10 +32,10 @@ function App() {
         <Route path="/Login" element= {<Login/>}/>
         <Route exact path="/ListarOrdenes" element={<ListarOrdenesPage />} />
         <Route exact path="/ListarOrdenesDesp" element={<ListarOrdenesDesp />} />
-        <Route path="/EditarRutas" element={<EditarRutasPage />} />
+        <Route exact path="/EditarRutas" element={<EditarRutasPage />} />
         <Route path="/Administrador" element= {<Administrador />}/>  
         <Route path="/VerUsuario" element= {<VerUsuario/>}/>  
-        <Route path="/EditarUsuario" element= {<EditarUsuario/>}/>
+        <Route exact path="/EditarUsuario" element= {<EditarUsuario/>}/>
         <Route path="/CrearUsuario" element= {<CrearUsuario/>}/>
         <Route path="/NuestrasRutas" element= {<NuestrasRutas/>}/>
         <Route path="/CotizaEnvio" element= {<CotizaEnvio/>}/>
