@@ -4,12 +4,30 @@ import Menu from '../componentes/Menu'
 import Pie from '../componentes/Pie'
 import {useState} from 'react'
 import Input from "../componentes/Input"
-import {Registrarse} from '../componentes/Registrarse'
+//import {Registrarse} from '../componentes/Registrarse'
 //var fs = require('fs');
 
 function Registro() {
-
-
+    const [msgError, setMsgError]=useState()
+    const [error, setError]=useState()
+    
+    async function  registro(){
+       
+        await fetch("http://localhost:8000/usuario/registro",{
+            headers:{"content-type":"application/json"},
+            method:"POST",
+            body: JSON.stringify({nombre, apellido,usuario, celular, correo, password, rol})
+        }).then(res=> res.json())
+        .then(res=>{
+            if (res.estado=== "ok"){
+                {window.location.href= "/login"}
+            }else{
+                setError(true);
+                setMsgError(res.msg);
+            }
+        })
+    }
+    
 
     const [nombre, setNombre]= useState("")
     const [apellido, setApellido]= useState("")
@@ -17,6 +35,8 @@ function Registro() {
     const [celular, setCelular]= useState("")
     const [correo, setCorreo]= useState("")
     const [password, setPassword]= useState("")
+    const [rol, setRol]=useState("")
+    /*
     function LimpiarCampos(event){
         
         setNombre("")
@@ -26,14 +46,18 @@ function Registro() {
         setCorreo("")
         setPassword("")
         
-    }  
+    }
+ 
     function handleButton(event, nombre, apellido, usuario, celular, correo, password){
         event.preventDefault();
-        Registrarse(nombre, apellido, usuario, celular, correo, password);
+        Registrarse(nombre, apellido, usuario, celular, correo, password, rol);
         LimpiarCampos();
-    }
+        registro();
+    }*/
     return (
         <>
+        {error && <div className= "alert alert-danger" role= "alert">{msgError}
+        </div>}
         <Cabecera/>
         <Menu/>
         <div>
@@ -79,8 +103,22 @@ function Registro() {
                                 <Input type="password" className="form-control box" placeholder="Ingrese su contraseña" id="inputPassword3" value={password} state={password} setState={setPassword} Required/>
                             </div>
                         </div>
+                        <div>
+                        <p>Regístrate como:</p>
+
+                        <div>
+                            <input type="radio" id="cliente" name="usuario" value= "cliente" state={rol} onChange={e=>setRol(e.target.value)} />
+                            <label for="cliente">Cliente</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="empleado" name="usuario" value= "empleado" state={rol} onChange={e=>setRol(e.target.value)}/>
+                            <label for="empleado">Empleado</label>
+                        </div>
                         
-                        <button type="submit" className="btn btn-primary" onClick={(e)=>{handleButton(e, nombre, apellido, usuario, celular, correo, password)}}>Registrarse</button>
+                        </div>
+                        <br/>
+                        <button type="button" className="btn btn-primary" onClick={registro}/*{(e)=>{handleButton(e, nombre, apellido, usuario, celular, correo, password)}}*/>Registrarse</button>
                     </form>
                 </div>
                 <div className="col">

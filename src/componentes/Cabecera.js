@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 const Cabecera = () => {
     return (
         
@@ -13,12 +14,18 @@ const Cabecera = () => {
                     <h2>Cargar Transportes y Logística Ltda.</h2>
                 </div>
                 <div className="col-2">
-                    <Link to="/Dashboard">
+                    
                     <img src="./images/user.jpg" alt="" className="user">
                     </img>
-                    </Link>
+
+                    
 
                     <p className='tipo'>Usuario </p>      
+
+                    
+                    
+                    
+
 
                 </div>
             </div>
