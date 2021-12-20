@@ -1,9 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./ListarOrdenes.css"
+import "./ListarOrdenes.css";
+
 
 const EditarRutas = () => {
     const [listado, setListado] = useState([]);
     const [recarga, setRecarga] = useState(false);
+    const [user,setUser] =useState({});
+    const [modalState, setModalState] = useState(false);  
     const rutaRef = useRef(); //document.getElementById("nom")
     const origenRef = useRef();
     const costoRef = useRef();
@@ -66,24 +69,26 @@ const EditarRutas = () => {
             })
     }
 
-    
+    const handleUpdate = () => {
 
-
-
-    const handleUpdate = (ruta) => {
+        const ruta = document.getElementById("numRuta").value;
+        const origen = document.getElementById("LOrigen").value;
+        const destino = document.getElementById("LDestino").value;
+        const distancia = document.getElementById("Distancia").value;
         
         fetch("http://localhost:8000/ruta/editar", {
             headers: { "content-type": "application/json" },
-            method: "DELETE",
-            body: JSON.stringify({ ruta })
+            method: "POST",
+            body: JSON.stringify({ ruta, origen, destino, distancia })
         }).then(res => res.json())
             .then(res => {
             if (res.estado === "ok")
-                alert("Ruta eliminada exitosamente");
+                alert("Cambio exitoso");
                 setRecarga(!recarga);
     
             })
     }
+
 
     function editarCosto() {
       
@@ -98,6 +103,28 @@ const EditarRutas = () => {
                 alert(data.msg); 
             })
     }
+
+
+    function ejecutarModal(props) { 
+       console.log(props);
+        var item = listado.find(item => item.ruta=== parseInt(props));
+            if (item!==undefined) {
+                const userr = {
+                    ruta:item.ruta,
+                    origen:item.origen,
+                    destino:item.destino,
+                    distancia: item.distancia
+
+                }
+                setUser(userr);
+                setModalState(true);
+            } else{
+                setModalState(false);
+                alert("Dato invalido");
+                console.log(document.getElementsByClassName("modal-backdrop fade show")[0].style.display = "none");
+            }
+  
+    }   
 
     return(
         <div>
@@ -125,7 +152,7 @@ const EditarRutas = () => {
                                 <td>{r.origen}</td>
                                 <td>{r.destino}</td>
                                 <td>{r.distancia}</td>
-                                <td><button className="btn btn-primary" onClick={()=>{this.seleccionarEmpresa(); this.modalInsertar()}}>Editar</button> <button type="button" className="btn btn-secondary" onClick={() => handleDelete(r.ruta)} >Eliminar</button></td>
+                                <td><button type="button" class="btn btn-primary mx-4" data-bs-toggle="modal" data-bs-target="#modalEditar" onClick={()=>ejecutarModal(r.ruta)} >Editar</button> <button type="button" className="btn btn-secondary" onClick={() => handleDelete(r.ruta)} >Eliminar</button></td>
                             </tr>
                         )}
                     </tbody>
@@ -133,9 +160,37 @@ const EditarRutas = () => {
             </div>
             
 
-            
-                   
+            <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" hidden  ={!modalState} >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Editar ruta #{user.ruta}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="numRuta" class="col-form-label"># Ruta</label>
+                                    <input type="number" min="0" class="form-control" id="numRuta" value={user.ruta}/>
+                                    <label for="LOrigen" class="col-form-label" >Lugar Origen</label>
+                                    <input type="text" class="form-control" id="LOrigen" value={user.origen}/>
+                                    <label for="LDestino" class="col-form-label" >Lugar Destino</label>
+                                    <input type="text" class="form-control" id="LDestino" value={user.destino}/>
+                                    <label for="Distancia" class="col-form-label">Distancia en km</label>
+                                    <input type="number" min="0" class="form-control" id="Distancia" value={user.distancia}/>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" onClick={handleUpdate}>Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            
+           
 
             <div className="container d-flex justify-content-center align-items-center" >
                 <button type="button" className="btn btn-primary btn-lg mx-4" data-bs-toggle="modal" data-bs-target="#crearUsu" >Crear nueva ruta</button> 
