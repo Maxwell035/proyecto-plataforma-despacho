@@ -18,7 +18,7 @@ function Home() {
                 <div className="col"></div>
                     <div className=" col box">
                         <p className="rutas">Nuestras Rutas</p>
-                        <a href="/NuestrasRutas"><img src="./images/mapa.jpg" alt="" className="btn1"/></a>
+                        <Link to="/NuestrasRutas"><img src="./images/mapa.jpg" alt="" className="btn1"/></Link>
                     </div>
                     <div className="col">
                         <p className="legend">¡Tus envíos a donde quieras!</p>

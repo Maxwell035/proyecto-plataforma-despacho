@@ -1,54 +1,52 @@
-import { useState } from "react"
-import rutas from "./rutas"
-import "./ListarOrdenes.css"
+import React, { useEffect, useState } from "react";
+import "./ListarOrdenes.css";
 
 const TablaRutas = () => {
-    
-    function infoRutas(numRuta, LugarOrigen, LugarDestino, distancia) {
-        let ruta = numRuta;
-        let LOrigen = LugarOrigen;
-        let LDestino = LugarDestino;
-        let Dist = distancia;
 
-        return(ruta, LOrigen, LDestino, Dist)
-    }
+    const [listado, setListado] = useState([]);
+
+    
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        fetch("http://localhost:8000/ruta/listar", {
+            headers: { "authorization": `Bearer ${token}` },
+            method: "GET"
+        })
+            .then(res => res.json())
+            .then(res => {
+                if (res.estado === "ok")
+                    setListado(res.data);
+            })
+    }, [])
 
 
     return(
-        <div>
-            <div className="row fluid p-3" >
-                <div className="container-fluid d-flex justify-content-center align-items-center">
-                    <h1 className="col-10 text-center">Nuestras Rutas Nacionales</h1>
-                </div>
-            </div>
 
-            <div class="container">
-                <table class="table text-center table-bordered border-dark">
+         <div className="container">
+         <h3 className='col-12 text-center m-4' >Nuestras Rutas</h3>
+                <table className="table text-center table-bordered border-dark m-4">
                     <thead>
                         <tr>
                             <th scope="col">Ruta</th>
                             <th scope="col">Lugar Origen</th>
                             <th scope="col">Lugar Destino</th>
-                            <th scope="col1">Distancia</th>
+                            <th scope="col">Distancia</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
-                        {rutas.map((r)=>
-                            <tr class=" align-items-center">
-                                <td>{r.numRuta}</td>
-                                <td>{r.LugarOrigen}</td>
-                                <td>{r.LugarDestino}</td>
+                        {listado.map((r)=>
+                            <tr className=" align-items-center">
+                                <td>{r.ruta}</td>
+                                <td>{r.origen}</td>
+                                <td>{r.destino}</td>
                                 <td>{r.distancia}</td>
-                            </tr> 
-                                 
-                        )
-
-                        }
+                               
+                            </tr>
+                        )}
                     </tbody>
                 </table>
             </div>
-        </div>
-        
                     
     )   
 }
