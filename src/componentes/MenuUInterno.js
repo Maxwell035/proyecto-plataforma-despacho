@@ -11,7 +11,7 @@ const MenuUInterno = () => {
 
                     <Link to="/ListarOrdenes" className="links-menu col3">Historial Ordenes de despacho</Link>
                     <Link to="/ListarOrdenesDesp" className="links-menu col3">Ordenes del Dia</Link>
-                    <Link to="#" className="links-menu col3">Aceptar Ordenes</Link>
+                    <Link to="/AceptarOrdenes" className="links-menu col3">Aceptar Ordenes</Link>
                     <Link to="/EditarRutas" className="links-menu col3">Crear y Modificar Rutas</Link>
 
 
