@@ -25,7 +25,7 @@ const ListarOrdenes = () => {
                             <th scope="col">No. Orden</th>
                             <th scope="col"></th>
                             <th scope="col">Fecha</th>
-                            <th scope="col"></th>+
+                            <th scope="col"></th>
                             <th scope="col">Estado</th>
                         </tr>
                     </thead>
