@@ -129,7 +129,7 @@ function ejecutarModal(props) {
                         <div className="row conteneditar">
                                 <div className="col">
                                     <div className="container ">
-                                        <img src="Imagen1.png" className="imagModal" alt=""/>
+                                        <img src="./images/Usuario.png" className="imagModal" alt="usuario"/>
                                     </div>
                                 </div>
 
