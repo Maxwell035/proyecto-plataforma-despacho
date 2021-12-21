@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Input from '../componentes/Input';
-import Button from '../componentes/Button';
 import "./ListarOrdenes.css"
 
 const ListarOrdenes = () => {
-
-    const [code,setCode] =useState();    
+ 
     const [user,setUser] =useState({});
     const [modalState, setModalState] = useState(false);  
     const [listado, setListado] = useState([]);

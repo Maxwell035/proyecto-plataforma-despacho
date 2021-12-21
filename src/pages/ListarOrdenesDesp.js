@@ -3,14 +3,10 @@ import React, { useEffect, useState } from "react";
 import MenuUInterno from '../componentes/MenuUInterno';
 import Cabecera from '../componentes/Cabecera';
 import Pie from '../componentes/Pie';
-import Input from '../componentes/Input';
-import Button from '../componentes/Button';
-
 
 
 const ListarOrdenesDesp = () => {
 
-    const [code,setCode] =useState();    
     const [user,setUser] =useState({});
     const [modalState, setModalState] = useState(false);  
     const [listado, setListado] = useState([]);

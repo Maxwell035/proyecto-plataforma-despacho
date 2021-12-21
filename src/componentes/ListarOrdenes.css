@@ -27,5 +27,9 @@
     background-color: #036469;
 }
 
-
+.imagModal{
+    display: block;
+    width: 140px;
+    align-items: center;
+}
 

@@ -6,9 +6,9 @@ const EditarRutas = () => {
     const [listado, setListado] = useState([]);
     const [recarga, setRecarga] = useState(false);
     const [user,setUser] =useState({});
-    const [costo,setCosto] =useState([]);
+    const [costo,setCosto] =useState();
     const [modalState, setModalState] = useState(false);  
-    const rutaRef = useRef(); //document.getElementById("nom")
+    const rutaRef = useRef(); 
     const origenRef = useRef();
     const costoRef = useRef();
     const destRef = useRef();
@@ -108,8 +108,7 @@ const EditarRutas = () => {
             .then(res => res.json())
             .then(res => {
                 if (res.estado === "ok")
-                    setCosto(res.data); 
-                    console.log(costo);
+                    setCosto(res.data[0].precio); 
             })
     }
     
@@ -196,13 +195,13 @@ const EditarRutas = () => {
                             <form>
                                 <div class="mb-3">
                                     <label for="numRuta" class="col-form-label"># Ruta</label>
-                                    <input type="number" min="0" class="form-control" id="numRuta" value={user.ruta}/>
+                                    <input type="number" min="0" class="form-control" id="numRuta" value={user.ruta} />
                                     <label for="LOrigen" class="col-form-label" >Lugar Origen</label>
-                                    <input type="text" class="form-control" id="LOrigen" ref={editOrRef} />
+                                    <input type="text" class="form-control" id="LOrigen" defaultValue={user.origen} ref={editOrRef} />
                                     <label for="LDestino" class="col-form-label" >Lugar Destino</label>
-                                    <input type="text" class="form-control" id="LDestino" ref={editDesRef}/>
+                                    <input type="text" class="form-control" id="LDestino" defaultValue={user.destino} ref={editDesRef}/>
                                     <label for="Distancia" class="col-form-label">Distancia en km</label>
-                                    <input type="number" min="0" class="form-control" id="Distancia" ref={editDistRef}/>
+                                    <input type="number" min="0" class="form-control" id="Distancia" defaultValue={user.distancia} ref={editDistRef}/>
                                 </div>
                             </form>
                         </div>
@@ -260,7 +259,7 @@ const EditarRutas = () => {
                             <div className="modal-body">
                                 <form>
                                     <div className="mb-3">
-                                        <label htmlFor="recipient-name" className="col-form-label">El costo actual por km es: <input type="text" className=" col-xs-3 border-0" readonly/></label>
+                                        <label htmlFor="recipient-name" className="col-form-label">El costo actual por km es: <input type="text" className=" col-xs-3 border-0" readonly Value={ costo }/></label>
                                         <h1 className="col-form-label">Ingrese el nuevo costo</h1>
                                         <input type="text" className="form-control" ref={costoRef} />
                                     </div>
