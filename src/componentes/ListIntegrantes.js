@@ -18,10 +18,7 @@ const ListIntegrantes = () => {
             <img src="./images/Usuario.png" alt="" ></img>
             Oscar Novoa Berthel
             </div>
-            <div class="col text-center">
-            <img src="./images/Usuario.png" alt="" ></img>
-                Carlos Borrero Llinas
-            </div>
+            
         </div>
         </p>
         <p>
@@ -32,8 +29,9 @@ const ListIntegrantes = () => {
             </div>
             <div class="col text-center">
             <img src="./images/Usuario.png" alt="" ></img>
-            Alexander Ramírez Mendoza
+                Carlos Borrero Llinas
             </div>
+            
         </div>
         </p>
         

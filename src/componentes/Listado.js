@@ -98,6 +98,7 @@ function ejecutarModal(props) {
 
     return (
 
+
       <>
         <div class="container">
         <h2 className="text-center w-50 m-auto ">Lista de Usuarios</h2>
@@ -171,6 +172,7 @@ function ejecutarModal(props) {
                             <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick={handleUpdate}>Guardar</button>
                         </div>
                     </div>
+
                 </div>
             </div>
     

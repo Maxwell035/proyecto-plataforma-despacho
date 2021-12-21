@@ -13,6 +13,7 @@ import EditarUsuario from './pages/EditarUsuario';
 import CrearUsuario from './pages/CrearUsuario';
 import NuestrasRutas from './pages/NuestrasRutas';
 import CotizaEnvio from './pages/CotizaEnvio';
+import AceptarOrdenes from './pages/AceptarOrdenes'
 import Dashboard from './pages/Dashboard';
 import Integrantes from './pages/Integrantes';
  
@@ -41,6 +42,7 @@ function App() {
         <Route path="/CotizaEnvio" element= {<CotizaEnvio/>}/>
         <Route path="/Dashboard" element= { <Dashboard />}/> 
         <Route path="/Integrantes" element= { <Integrantes />}/> 
+        <Route path="/AceptarOrdenes" element= { <AceptarOrdenes />}/> 
 
       </Routes>
  

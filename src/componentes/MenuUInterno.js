@@ -8,10 +8,12 @@ const MenuUInterno = () => {
         <div className="row fluid" >
             <nav className="navbar navbar-light" style= {{ 'background-color': ' #008990' }}>
                 <div className="contenedor-menu container-fluid">
+
                     <Link to="/ListarOrdenes" className="links-menu col">Historial Ordenes de despacho</Link>
                     <Link to="/ListarOrdenesDesp" className="links-menu col">Ordenes del Dia</Link>
-                    <Link to="#" className="links-menu col">Aceptar Ordenes</Link>
+                    <Link to="/AceptarOrdenes" className="links-menu col">Aceptar Ordenes</Link>
                     <Link to="/EditarRutas" className="links-menu col">Crear y Modificar Rutas</Link>
+
 
 
                 </div>
